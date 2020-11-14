@@ -18,10 +18,10 @@ inline void runge_kutta(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, do
     Eigen::VectorXd temp;
     force(k1, q, qdot);
 
-    temp = q+0.5*dt*(k1/mass);
+    temp = q+dt*(k1/mass);
     force(k2, temp, qdot);
 
-    temp = q+0.5*dt*(k2/mass);
+    temp = q+dt*(k2/mass);
     force(k3, temp, qdot);
 
     temp = q+dt*(k3/mass);

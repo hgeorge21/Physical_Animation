@@ -98,12 +98,10 @@ bool draw(igl::opengl::glfw::Viewer & viewer) {
 
             PE += V_spring;
         }
-        
         Visualize::add_energy(t, KE, PE);
 
     //update vertex positions using simulation
     Visualize::update_vertex_positions(0, P.transpose()*q + x0);
-
     return false;
 }
 
@@ -112,7 +110,7 @@ int main(int argc, char **argv) {
     std::cout<<"Start A2\n";
 
     //load geometric data 
-    igl::readMESH("../../A2/data/coarse_bunny.mesh",V,T, F);
+    igl::readMESH("../../../../A2/data/coarse_bunny.mesh",V,T, F);
     igl::boundary_facets(T, F);
     F = F.rowwise().reverse().eval();
     igl::edges(T,E);
@@ -141,6 +139,7 @@ int main(int argc, char **argv) {
     
     //correct M, q and qdot so they are the right size
     q = P*q;
+
     qdot = P*qdot;
     M = P*M*P.transpose();
 

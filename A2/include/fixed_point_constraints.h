@@ -5,7 +5,7 @@
 #include <vector>
 
 //Input:
-//  q_size - total number of scalar generalized coordinaes (3 times number of vertices in the mesh)
+//  q_size - total number of scalar generalized coordinates (3 times number of vertices in the mesh)
 //  indices - indices (row ids in V) for fixed vertices
 //Output:
 //  P - mxn sparse matrix which projects out fixed vertices

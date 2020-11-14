@@ -39,5 +39,9 @@ find_package(LIBIGL REQUIRED QUIET)
 
 set(EIGENROOT "${PROJECT_SOURCE_DIR}/libigl/external/eigen")
 
+
 add_subdirectory(A1)
 add_subdirectory(A2)
+add_subdirectory(A3)
+add_subdirectory(A4)
+add_subdirectory(A5)
